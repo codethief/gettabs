@@ -2,19 +2,26 @@ A simple web extension to easily obtain a list with the URLs of all open
 tabs for easy copy & paste. Since I only use Firefox (both on my desktop
 and on Android) I haven't tested this on Chrome.
 
-# Usage
-To obtain the list of tabs
-
-- in the desktop version of Firefox, click on the extension's icon next
-  to the address bar.
-- in Firefox for Android, tap on the "GetTabs" item in the menu.
-
 
 # Required permissions
 The extension requires the following permissions:
 
 - Access tabs (i.e. their URLs)
 - Write to the clipboard
+
+
+# Installation
+Head to the releases page here on GitHub and download the xpi file. Then
+install it manually in Firefox through the `about:addons` page (which
+can also be accessed through the menu).
+
+
+# Usage
+To obtain the list of tabs
+
+- in the desktop version of Firefox, click on the extension's icon next
+  to the address bar.
+- in Firefox for Android, tap on the "GetTabs" item in the menu.
 
 
 # Debugging / development
