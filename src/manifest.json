@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "gettabs",
+    "description": "A simple web extension to easily obtain a list with the URLs of all open tabs for easy copy & paste.",
+    "version": "0.0.2",
+    "icons": {
+        "64": "icons/icon.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "64": "icons/icon.png"
+        },
+        "default_popup": "browserAction/index.html",
+        "default_title": "GetTabs",
+        "browser_style": true
+    },
+    "permissions": [
+        "clipboardWrite",
+        "tabs"
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "gettabs@codethief.eu",
+            "strict_min_version": "57.0"
+        }
+    }
+}
