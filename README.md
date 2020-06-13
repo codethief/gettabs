@@ -1,6 +1,6 @@
-A simple web extension to easily obtain a list with the URLs of all open
-tabs for easy copy & paste. Since I only use Firefox (both on my desktop
-and on Android) I haven't tested this on Chrome.
+A simple web extension to obtain a list with the URLs of all open tabs
+for easy copy & paste. Mainly meant for Firefox / Firefox for Android
+(though it might also work in Chrome but I haven't tested this).
 
 
 # Required permissions
@@ -22,6 +22,12 @@ To obtain the list of tabs
 - in the desktop version of Firefox, click on the extension's icon next
   to the address bar.
 - in Firefox for Android, tap on the "GetTabs" item in the menu.
+
+Caveat: Tabs that have become "stale" will show up as `about:blank` in
+the list. To fix this, reload the tab. Unfortunately, there is nothing I
+could do about that, short of having the extension reload all tabs. I
+didn't want to do this, though, as I have several hundred tabs on my
+phone and I don't think it would handle that well…
 
 
 # Debugging / development
@@ -66,19 +72,20 @@ where the JWT issuer and secret need to be obtained beforehand from
 # Similar projects
 - [Tabs
   Export](https://addons.mozilla.org/en-US/firefox/addon/tabs-export/)
-  - This extension saves all tabs to a file. Before that, however, it
-    also reloads all tabs (which I didn't want because I'm afraid of
-    reloading each of my 400 or so tabs on my Android device at once).
+  - This extension saves all tabs to a file. It also reloads all tabs
+    before retrieving the URLs to prevent the `about:blank` behavior
+    (see above).
+  - I had trouble downloading this extension for the longest time (there
+    seems to be a bug on addons.mozilla.org) which then inspired me to
+    start the project you're looking at right now.
 - [Another
   way](https://android.stackexchange.com/questions/143490/how-can-i-export-all-my-open-firefox-tabs-to-a-text-file/205587#205587)
   to easily obtain the current list of tabs.
 
 
-# License
+# Copyright, License, Disclaimer of warranty
 © 2020 [codethief](https://codethief.eu). License: [GPL 3.0](LICENSE.md).
 
-
-# Disclaimer of warranty
 THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
 APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
 HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY
